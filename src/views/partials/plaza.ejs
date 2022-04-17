@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza</title>
+</head>
+<body>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightPlaza" aria-labelledby="offcanvasRightLabel">
+        <div id="offcanvasHeaderPlaza" class="offcanvas-header">
+            <div id="headerPlaza" class="d-flex">
+                <h5 class="d-flex" id="offcanvasRightLabel">Listado de palets en PLAZA</h5>
+                <button type="button" class="position-absolute top-0 end-0 m-1 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="opcionesPlaza" class="opciones d-flex">
+                <button class="btn btn-primary btn-sm m-1">Entrar Seleccion</button>
+                <button class="btn btn-success btn-sm m-1">Expedir Seleccion</button>
+            </div>
+        </div>
+    
+        <div class="offcanvas-body">
+        <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN PLAZA -->
+            <% if (palet.localizacion === "PLAZA") { %>
+                <div id="<%= palet.idPalet%>" class="d-flex shadow-sm p-0">
+                    <div class="paletData d-flex flex-grow-1 pt-3" onclick="seleccionarPalet('<%= palet.idPalet%>')">
+                        <p class="itemPlaza fw-bold" id="numPaletPlaza"> <%= palet.idPalet%> </p>
+                        <p class="itemPlaza" id="descripcionPalet"> 
+                            - <%=palet.producto%> - <%= palet.calibre %> - <%= palet.caja %> - <%= palet.alveolo %></p>
+                        </div>
+                    <div class="d-flex pt-3">
+                        <form class="m-0" action="/camara<%= palet._id%>?_method=PUT" method="POST">
+                            <button class="btn btn-primary btn-sm d-inline mr-1 px-1">Camara</button>
+                        </form>
+                        <form class="m-0" action="/expedir<%= palet._id%>?_method=PUT" method="POST">
+                            <button class="btn btn-success btn-sm d-inline mx-1 px-1">Expedir</button>
+                        </form>                 
+                    </div>
+                        
+                </div>
+            <% } %>
+        <% } %>
+            
+        </div>
+    </div>
+
+
+
+</body>
+</html>

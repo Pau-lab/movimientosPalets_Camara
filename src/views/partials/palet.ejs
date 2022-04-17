@@ -1,0 +1,36 @@
+
+<body>
+
+
+            <div id="<%= palet.idPalet%>" class="palet <%=palet.size%> user-selection-none position-relative" 
+                ondblclick="openToolBar('<%= palet.idPalet%>')" onclick="seleccionarPalet('<%= palet.idPalet%>')" >
+                <div class="toolBar position-absolute top-0 start-100 shadow rounded">
+                    <form action="/editar<%= palet._id%>?_method=PUT" method="POST">
+                        <button type="button" class="btn btn-secondary btn-lg toolBtn">Editar</button>
+                    </form>
+                    <form action="/plaza<%= palet._id%>?_method=PUT" method="POST">
+                        <button class="btn btn-warning btn-lg toolBtn">Plaza</button>
+                    </form>
+                    <form action="/expedir<%= palet._id%>?_method=PUT" method="POST">
+                        <button class="btn btn-info btn-lg toolBtn">Expedir</button>
+                    </form>
+                    <form action="/delete<%= palet._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-lg toolBtn">Eliminar</button>
+                    </form>
+                    <button  onclick="closeToolBar('<%= palet.idPalet%>')"
+                    class="closeTool btn btn-danger position-absolute bottom-100 start-100 shadow rounded-circle bg-danger">
+                        <span class="fw-bold">X</span>
+                    </button>
+                
+                </div>
+                
+                <p class="item" id="numPalet"><%= palet.idPalet%></p>
+                <p class="item" id="producto"><%=palet.producto%></p>
+                <p class="item" id="calibre"><%= palet.calibre %></p>
+                <p class="item" id="alveolo"><%= palet.alveolo %></p>
+                <p class="item" id="caja"><%= palet.caja %></p>
+            </div>
+
+    
+</body>
+

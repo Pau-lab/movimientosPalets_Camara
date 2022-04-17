@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include ("./partials/nav.ejs") %> 
+
+    <div id="camara" class="overflow-auto">    
+        <div id="altura" >
+            <div id="fa1" class="filaA line"><p style="color: white;">Arriba N.1</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa1") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa2" class="filaA line"><p style="color: white;">Arriba N.2</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa2") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa3" class="filaA line"><p style="color: white;">Arriba N.3</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa3") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa4" class="filaA line"><p style="color: white;">Arriba N.4</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa4") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa5" class="filaA line"><p style="color: white;">Arriba N.5</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa5") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa6" class="filaA line"><p style="color: white;">Arriba N.6</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa6") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa7" class="filaA line"><p style="color: white;">Arriba N.7</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa7") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa8" class="filaA line"><p style="color: white;">Arriba N.8</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa8") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa9" class="filaA line"><p style="color: white;">Arriba N.9</p>
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa9") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa10" class="filaA line"><p style="color: white;">Arriba N.10</p>
+                    <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa10") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa11" class="filaA line"><p style="color: white;">Arriba N.11</p>
+                    <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa11") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa12" class="filaA line"><p style="color: white;">Arriba N.12</p>
+                    <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa12") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fa13" class="filaA line"><p style="color: white;">Arriba N.13</p>
+                    <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fa13") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+
+        <div id="suelo" >
+            <div id="fs1" class="filaS line">
+                Suelo N.1
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs1") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs2" class="filaS line">
+                Suelo N.2
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs2") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs3" class="filaS line">
+                Suelo N.3
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs3") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs4" class="filaS line">
+                Suelo N.4
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs4") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs5" class="filaS line">
+                Suelo N.5
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs5") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs6" class="filaS line">
+                Suelo N.6
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs6") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs7" class="filaS line">
+                Suelo N.7
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs7") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs8" class="filaS line">
+                Suelo N.8
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs8") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs9" class="filaS line">
+                Suelo N.9
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs9") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs10" class="filaS line">
+                Suelo N.10
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs10") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs11" class="filaS line">
+                Suelo N.11
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs11") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs12" class="filaS line">
+                Suelo N.12
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs12") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+            <div id="fs13" class="filaS line">
+                Suelo N.13
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fs13") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+             </div>
+        </div>
+
+        <div id="espacio" class="line">
+           
+            <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA -->
+                <% if (palet.localizacion === "CAMARA" && palet.fila === "espacio") { %>
+                    <%- include ("./partials/palet.ejs", {palet}) %> 
+                <% } %>
+            <% } %>
+        </div>
+
+        <div id="pared">
+            <div id="fp1" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp1") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp2" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp2") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp3" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp3") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp4" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp4") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp5" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp5") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp6" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp6") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp7" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp7") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp8" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp8") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp9" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp9") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp10" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp10") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp11" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp11") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp12" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp12") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+            <div id="fp13" class="filaP line">
+                <% for(let palet of palets) { %> <!--FILTRAR SOLO LOS QUE ESTEN EN CAMARA Y EN DICHA FILA -->
+                    <% if (palet.localizacion === "CAMARA" && palet.fila === "fp13") { %>
+                        <%- include ("./partials/palet.ejs", {palet}) %> 
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="d-none">
+            <form id="updateFilaForm" action="/updateFilaPalet?_method=PUT" method="POST">
+                <input id="inputPaletId" type="hidden" name="id">                
+                <input id="inputNewFila" type="hidden" name="newFila">                
+                <input type="hidden" id="origenId" name="filaOrigen">
+                <input type="hidden" id="origenOrden" name="posicionesOrigen">
+                <input type="hidden" id="destinoId" name="filaDestino">
+                <input type="hidden" id="destinoOrden" name="posicionesDestino">
+            </form>
+        </div>
+        <div class="ordenList visually-hidden">
+            <% for (let fila of filas) { %>
+                <div id="<%= fila.idFila %>Fila">
+                    <%= fila.ordenPalets %>
+                </div>
+            <% } %> 
+        </div>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script>
+
+
+
+ 
+const altura = document.querySelector('#altura');
+const suelo = document.querySelector('#suelo');
+
+function verAltura () {
+    suelo.style.display = "none";
+    altura.style.display = "flex";
+};
+
+function verSuelo() {
+    suelo.style.display = "flex";
+    altura.style.display = "none";
+};
+
+// BARRA DE HERRAMIENTAS/OPCIONES DE CADA PALET EN CAMARA:
+function openToolBar(paletId) {
+    const palet = document.getElementById(paletId)
+    const toolBar = palet.querySelector('.toolBar')
+    toolBar.parentElement.classList.add('selectionTools')
+    toolBar.parentElement.classList.remove('selection')
+    toolBar.style.display = 'block'
+}
+
+function closeToolBar(paletId) {
+    const palet = document.getElementById(paletId)
+    const toolBar = palet.querySelector('.toolBar')
+    toolBar.style.display = 'none'
+    toolBar.parentElement.classList.remove('selection')
+    toolBar.parentElement.classList.remove('selectionTools')
+}
+
+
+//SELECCIONAR PALET/S para aplicar marcajes en grupo (por ejemplo)
+function seleccionarPalet(paletId) {
+    const palet = document.getElementById(paletId)
+    palet.classList.toggle('selection')
+}
+
+const estanteria = {
+    group: "suelo",
+    ghostClass: ".ghost",
+    animation: 150,
+    dataIdAttr: "id",
+       
+    onEnd: function (evt) {
+        var palet = evt.item.id
+        var origen =  evt.from.id
+        var destino =  evt.to.id
+        var origenList = [... document.querySelector("#"+origen).children].map(palet => {return palet.id})
+        var destinoList = [... document.querySelector("#"+destino).children].map(palet => {return palet.id})
+
+        // Envia mediante un form oculto la nueva fila a la que se ha movido el palet y actualiza la db
+        const formPalet = document.querySelector("#updateFilaForm");
+        document.getElementById("inputPaletId").value = palet
+        document.getElementById("inputNewFila").value = destino;
+        document.getElementById("origenId").value = origen
+        document.getElementById("origenOrden").value = origenList;
+        document.getElementById("destinoId").value = destino
+        document.getElementById("destinoOrden").value = destinoList;
+
+        formPalet.submit()
+    },
+
+    store: 
+    {
+        get: function (sortable) { // coge los datos del div oculto al final del html con los ordenes de cada fila dado por la bd.
+            var origen = sortable.el.id;
+            var newOrden = document.getElementById(origen +"Fila").innerText.split(",")
+            sortable.sort(newOrden)
+            // console.log(newOrden);
+            // console.log(origen);        
+        },
+    }
+}
+
+//  _____CREAR SORTABLES -CON SORTABLEJS- DE CADA FILA DE LA CAMARA
+// he podido hacerlo mediante un for() pero no con todas sus funcionalidades
+const sortableEspacio = new Sortable(document.getElementById('espacio'), estanteria)
+
+
+const sortfa1 = new Sortable(document.getElementById('fa1'), estanteria)
+const sortfa2 = new Sortable(document.getElementById('fa2'), estanteria)
+const sortfa3 = new Sortable(document.getElementById('fa3'), estanteria)
+const sortfa4 = new Sortable(document.getElementById('fa4'), estanteria)
+const sortfa5 = new Sortable(document.getElementById('fa5'), estanteria)
+const sortfa6 = new Sortable(document.getElementById('fa6'), estanteria)
+const sortfa7 = new Sortable(document.getElementById('fa7'), estanteria)
+const sortfa8 = new Sortable(document.getElementById('fa8'), estanteria)
+const sortfa9 = new Sortable(document.getElementById('fa9'), estanteria)
+const sortfa10 = new Sortable(document.getElementById('fa10'), estanteria)
+const sortfa11 = new Sortable(document.getElementById('fa11'), estanteria)
+const sortfa12 = new Sortable(document.getElementById('fa12'), estanteria)
+const sortfa13 = new Sortable(document.getElementById('fa13'), estanteria)
+
+const sortfs1 = new Sortable(document.getElementById('fs1'), estanteria)
+const sortfs2 = new Sortable(document.getElementById('fs2'), estanteria)
+const sortfs3 = new Sortable(document.getElementById('fs3'), estanteria)
+const sortfs4 = new Sortable(document.getElementById('fs4'), estanteria)
+const sortfs5 = new Sortable(document.getElementById('fs5'), estanteria)
+const sortfs6 = new Sortable(document.getElementById('fs6'), estanteria)
+const sortfs7 = new Sortable(document.getElementById('fs7'), estanteria)
+const sortfs8 = new Sortable(document.getElementById('fs8'), estanteria)
+const sortfs9 = new Sortable(document.getElementById('fs9'), estanteria)
+const sortfs10 = new Sortable(document.getElementById('fs10'), estanteria)
+const sortfs11 = new Sortable(document.getElementById('fs11'), estanteria)
+const sortfs12 = new Sortable(document.getElementById('fs12'), estanteria)
+const sortfs13 = new Sortable(document.getElementById('fs13'), estanteria)
+
+const sortfp1 = new Sortable(document.getElementById('fp1'), estanteria)
+const sortfp2 = new Sortable(document.getElementById('fp2'), estanteria)
+const sortfp3 = new Sortable(document.getElementById('fp3'), estanteria)
+const sortfp4 = new Sortable(document.getElementById('fp4'), estanteria)
+const sortfp5 = new Sortable(document.getElementById('fp5'), estanteria)
+const sortfp6 = new Sortable(document.getElementById('fp6'), estanteria)
+const sortfp7 = new Sortable(document.getElementById('fp7'), estanteria)
+const sortfp8 = new Sortable(document.getElementById('fp8'), estanteria)
+const sortfp9 = new Sortable(document.getElementById('fp9'), estanteria)
+const sortfp10 = new Sortable(document.getElementById('fp10'), estanteria)
+const sortfp11 = new Sortable(document.getElementById('fp11'), estanteria)
+const sortfp12 = new Sortable(document.getElementById('fp12'), estanteria)
+const sortfp13 = new Sortable(document.getElementById('fp13'), estanteria)
+
+// huecos pegados a la PARED (no hay estanteria):
+// const filaPared1 = document.querySelector('#fp1')
+// const sortFP1 = new Sortable(filaPared1, estanteria)
+// const filaPared2 = document.querySelector('#fp2')
+// const sortFP2 = new Sortable(filaPared2, estanteria)
+// const filaPared3 = document.querySelector('#fp3')
+// const sortFP3 = new Sortable(filaPared3, estanteria)
+// const filaPared4 = document.querySelector('#fp4')
+// const sortFP4 = new Sortable(filaPared4, estanteria)
+// const filaPared5 = document.querySelector('#fp5')
+// const sortFP5 = new Sortable(filaPared5, estanteria)
+// const filaPared6 = document.querySelector('#fp6')
+// const sortFP6 = new Sortable(filaPared6, estanteria)
+// const filaPared7 = document.querySelector('#fp7')
+// const sortFP7 = new Sortable(filaPared7, estanteria)
+// const filaPared8 = document.querySelector('#fp8')
+// const sortFP8 = new Sortable(filaPared8, estanteria)
+// const filaPared9 = document.querySelector('#fp9')
+// const sortFP9 = new Sortable(filaPared9, estanteria)
+// const filaPared10 = document.querySelector('#fp10')
+// const sortFP10 = new Sortable(filaPared10, estanteria)
+// const filaPared11 = document.querySelector('#fp11')
+// const sortFP11 = new Sortable(filaPared11, estanteria)
+// const filaPared12 = document.querySelector('#fp12')
+// const sortFP12 = new Sortable(filaPared12, estanteria)
+// const filaPared13 = document.querySelector('#fp13')
+// const sortFP13 = new Sortable(filaPared13, estanteria)
+
+// // estanterias del SUELO:
+// const filaSuelo1 = document.querySelector('#fs1')
+// const sortFS1 = new Sortable(filaSuelo1, estanteria)
+// const filaSuelo2 = document.querySelector('#fs2')
+// const sortFS2 = new Sortable(filaSuelo2, estanteria)
+// const filaSuelo3 = document.querySelector('#fs3')
+// const sortFS3 = new Sortable(filaSuelo3, estanteria)
+// const filaSuelo4 = document.querySelector('#fs4')
+// const sortFS4 = new Sortable(filaSuelo4, estanteria)
+// const filaSuelo5 = document.querySelector('#fs5')
+// const sortFS5 = new Sortable(filaSuelo5, estanteria)
+// const filaSuelo6 = document.querySelector('#fs6')
+// const sortFS6 = new Sortable(filaSuelo6, estanteria)
+// const filaSuelo7 = document.querySelector('#fs7')
+// const sortFS7 = new Sortable(filaSuelo7, estanteria)
+// const filaSuelo8 = document.querySelector('#fs8')
+// const sortFS8 = new Sortable(filaSuelo8, estanteria)
+// const filaSuelo9 = document.querySelector('#fs9')
+// const sortFS9 = new Sortable(filaSuelo9, estanteria)
+// const filaSuelo10 = document.querySelector('#fs10')
+// const sortFS10 = new Sortable(filaSuelo10, estanteria)
+// const filaSuelo11 = document.querySelector('#fs11')
+// const sortFS11 = new Sortable(filaSuelo11, estanteria)
+// const filaSuelo12 = document.querySelector('#fs12')
+// const sortFS12 = new Sortable(filaSuelo12, estanteria)
+// const filaSuelo13 = document.querySelector('#fs13')
+// const sortFS13 = new Sortable(filaSuelo13, estanteria)
+
+// // estanterias de ARRIBA:
+// const filaArriba1 = document.querySelector('#fa1')
+// const sortFA1 = new Sortable(filaArriba1, estanteria)
+// const filaArriba2 = document.querySelector('#fa2')
+// const sortFA2 = new Sortable(filaArriba2, estanteria)
+// const filaArriba3 = document.querySelector('#fa3')
+// const sortFA3 = new Sortable(filaArriba3, estanteria)
+// const filaArriba4 = document.querySelector('#fa4')
+// const sortFA4 = new Sortable(filaArriba4, estanteria)
+// const filaArriba5 = document.querySelector('#fa5')
+// const sortFA5 = new Sortable(filaArriba5, estanteria)
+// const filaArriba6 = document.querySelector('#fa6')
+// const sortFA6 = new Sortable(filaArriba6, estanteria)
+// const filaArriba7 = document.querySelector('#fa7')
+// const sortFA7 = new Sortable(filaArriba7, estanteria)
+// const filaArriba8 = document.querySelector('#fa8')
+// const sortFA8 = new Sortable(filaArriba8, estanteria)
+// const filaArriba9 = document.querySelector('#fa9')
+// const sortFA9 = new Sortable(filaArriba9, estanteria)
+// const filaArriba10 = document.querySelector('#fa10')
+// const sortFA10 = new Sortable(filaArriba10, estanteria)
+// const filaArriba11 = document.querySelector('#fa11')
+// const sortFA11 = new Sortable(filaArriba11, estanteria)
+// const filaArriba12 = document.querySelector('#fa12')
+// const sortFA12 = new Sortable(filaArriba12, estanteria)
+// const filaArriba13 = document.querySelector('#fa13')
+// const sortFA13 = new Sortable(filaArriba13, estanteria)
+
+
+
+
+
+
+
+
+
+// ----------------------------COSAS QUE FUNCIONAN PERO NO HE USADO AL FINAL-------------------
+// DECLARAR DE FORMA AUTOMATICA UN NUEVO SORTABLE POR FILA (Funciona pero al ponerle el Store/Get no 
+// reconoce los sortables declarados y no ordena las estanterias con los palets)
+
+// const arrayFilasCamara = document.querySelectorAll(".line")
+
+// for (let i = 0; i < arrayFilasCamara.length; i++) {
+
+//     new Sortable(arrayFilasCamara[i],sueloSort)
+// };
+
+// ____GUARDAR POSICIONES EN LOCALSTORAGE____
+// savePositions(sortable => {
+//     var order = sortable.toArray(); // convierte en array las posiciones de la lista-Sortable declarada con "new Sortable()"
+//     localStorage.setItem(sortable, JSON.stringify(order)); // Guarda en el localStorage del navegador el array convertido en string
+//     console.log("ORDEN DE POSICIONES GUARDADAS ES", order);
+// });
+
+// reorderPalets(keyString,sortable => {
+//     var newOrder = localStorage.getItem(keyString); // recupera la informacion y la guarda con una variable
+//     sortable.sort(JSON.parse(newOrder), true); // con .sort de sortableJS ordena la lista-Sortable con la informacin pasada a array(JSON.parse)
+//     console.log("PALETS REORDENADOS. INDEX:", JSON.parse(newOrder));
+// })
+
+
+
+
+    </script>
+
+</body>
+</html>

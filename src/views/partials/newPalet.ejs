@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Añadir palet nuevo a camara</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div id="formPaletNuevo" class="container">
+            <form class="paletInputs row"  action="/" method="POST">
+        
+                <input type="text" name="idPalet" id="inputId" class="form-control" placeholder="numero de palet" autocomplete="off" maxlength="5">
+                <input type="text" name="producto" id="inputProd" class="form-control" placeholder="NA" autocomplete="off">
+                <input type="text" name="caja" id="inputCaja" class="form-control" placeholder="CAJA" autocomplete="off" >
+                <input type="text" name="calibre" id="inputCal" class="form-control" placeholder="2A" autocomplete="off" maxlength="2">
+                <input type="text" name="alveolo" id="inputAlv" class="form-control" placeholder="XX" maxlength="2" onclick="setFocus(inputAlv,inputId)">
+                <input type="text" name="size" id="inputSize" class="form-control" value="EU">
+    
+                <button type="submit" class="btnCrear btn btn-success">Crear Palet</button>
+                          
+            </form>
+            
+            <div class="teclado row">
+                <div id="7-9">
+                    <button type="button" class="num btn btn-secondary btn-lg" value="7" onclick="takeValue(7)">7</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="8">8</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="9">9</button>
+                </div>
+                <div id="4-6">
+                    <button type="button" class="num btn btn-secondary btn-lg" value="4">4</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="5">5</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="6">6</button>
+                </div>
+                <div id="1-3">
+                    <button type="button" class="num btn btn-secondary btn-lg" value="1">1</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="2">2</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="3">3</button>
+                </div>
+                <div id="-0-">
+                    <button type="button" class="num btn btn-secondary btn-lg" value="">Borrar</button>
+                    <button type="button" class="num btn btn-secondary btn-lg" value="0">0</button>
+                    <button type="button"  class="num btn btn-secondary btn-lg">Enter</button>
+                </div>
+            </div>
+            
+            <div class="listadosPalet row mt-2">
+                <div id="listaProductos"  class="divlista">
+                    <button id="btnProd" class="btnLista btn btn-info" onclick="desplegar(listaProd, listaCaja, listaCal)">Producto</button>
+                </div>
+                <div id="listaCajas"  class="divlista">
+                    <button id="btnCaja" class="btnLista btn btn-warning" onclick="desplegar(listaCaja, listaProd, listaCal)">Caja</button>
+                </div>
+                <div id="listaCalibres"  class="divlista">
+                    <button id="btnCal" class="btnLista btn btn-light" onclick="desplegar(listaCal, listaProd, listaCaja, )">Calibre</button>
+                </div>
+                <div id="listaSize"  class="divlista">
+                    <button onclick="size('EU', 'F')" id="btnSize" class="btnLista btn btn-secondary">EU/F</button>
+                </div>
+            </div>
+                
+                
+    <!-- LISTAS DESPLEGABLES CON LOS BOTONES -->
+            <div class="opciones position-absolute top-0">
+                <div class="lista listaProd  position-absolute notDisplay">
+                        <% for(let producto of productos) { %>
+                            <button class="btnOpt btn btn-info btn-lg my-1"
+                            onclick="opcion('<%= producto.idProd%>',inputProd)" id="optProd" value="<%= producto.idProd%>"><%= producto.idProd%> </button>
+                        <% } %> 
+                </div>
+                <div class="lista listaCaja position-absolute  notDisplay">
+                        <% for(let caja of cajas) { %>
+                            <button  class="btnOpt btn btn-warning btn-lg my-1"
+                            onclick="opcion('<%= caja.idCaja%>',inputCaja)" id="optCaja"value="<%=caja.idCaja%>"><%= caja.idCaja%> </button>
+                        <% } %> 
+                </div>
+                <div class="lista listaCal position-absolute  notDisplay">
+                        <% for(let calibre of calibres) { %>
+                            <button class="btnOpt btn btn-light btn-lg my-1"
+                            onclick="opcion('<%= calibre.idCalibre%>',inputCal)"  id="<%=calibre._id%>"  ><%= calibre.idCalibre%> </button>
+                        <% } %> 
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+
+
+
+
+    
+  
+
+<script >
+    const btnCaja = document.querySelector("#btnCaja")
+    const btnCal = document.querySelector("#btnCal")
+    const btnProd = document.querySelector("#btnProd")
+    const opciones = document.querySelector(".opciones")
+    const listaCaja = document.querySelector(".listaCaja")
+    const listaProd = document.querySelector(".listaProd")
+    const listaCal = document.querySelector(".listaCal")
+    const Size = document.querySelector("#inputSize");
+    const inputCal = document.querySelector("#inputCal");
+    const inputProd = document.querySelector("#inputProd");
+    const inputCaja = document.querySelector("#inputCaja");
+    const inputAlv = document.querySelector("#inputAlv");
+    const inputId = document.querySelector("#inputId");
+    
+
+
+    function desplegar(opt1, opt2, opt3) {
+        opt1.classList.toggle("notDisplay")
+        opt2.classList.add("notDisplay")
+        opt3.classList.add("notDisplay")
+    };
+
+    function size(x,y) {
+        if (Size.value === x) {
+            Size.value = y;
+        } else {
+            Size.value = x;
+        }
+    }
+
+    function opcion(valor,input) {
+        input.value = valor
+    }
+    
+    function setFocus(input1, input2) {
+        document.querySelector(input1).classList.add('focus');
+        document.querySelector(input2).classList.remove('focus');
+        console.log(input1.classList);
+    }
+    function nextFocus(input1, input2) {
+        document.querySelector(input1).classList.toggle('focus');
+        document.querySelector(input2).classList.toggle('focus');
+    }
+
+    function takeValue(x) {
+        
+            if (document.querySelector(".focus").value.length < 5) {
+                document.querySelector(".focus").value += x;
+            }       
+
+    }
+    
+    function clearInput(y) {
+        document.querySelector(".focus").value = y;
+    }  
+    
+</script>
+
+</body>
+</html>

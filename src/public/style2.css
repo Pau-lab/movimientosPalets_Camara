@@ -1,0 +1,227 @@
+@import './styles.css';
+
+
+/* ESTILO PROPIO NO BOOTRSTRAP */
+.teclado {justify-content: center; margin: 0;}
+.num{
+  width: 30%;
+  margin: 0.15rem 0;
+}
+.divLista {
+  width: 25%;
+  height: 5em;
+  padding: 0.2rem;
+}
+.btnLista {width:100%;height: 100%;}
+#suelo{display: flex;}
+#altura {display: none;}
+
+.selection{ background-color: rgb(153, 255, 255) !important;}
+.marcado {background-color: rgba(255, 35, 94, 0.689) !important;}
+.selectionTools{border: 3px solid var(--bs-red) !important;}
+.focus{background-color: rgba(255, 47, 116, 0.675) !important;}
+.ghost {background-color: rgba(251, 255, 0, 0.411);}
+
+.toolBar {
+  display: none;
+  background-color: rgb(221, 221, 221);
+  z-index: 2;
+}
+.toolBtn {
+  width: 6rem;
+  margin: 0.2rem;
+  justify-content: center;
+}
+
+#camara {
+  border: 3px solid var(--GrisClaro);
+  display: block;
+  align-content: center;
+}
+
+#suelo, #altura {
+  background-color: var(--Blanco);
+  display: flex;
+  flex-direction: row;
+  /* width: inherit; */
+}
+
+#altura{display: none;}
+
+#espacio {
+  background-color: var(--GrisClaro);
+  display: grid;
+  grid-template-columns: repeat(13, 6rem);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1rem;
+  height: 5rem;
+  width: inherit;
+  margin: 0.5rem 0;
+  align-content: center;
+  padding-left: 0.5rem;
+}
+
+#pared {
+  background-color: var(--Blanco);
+  display: flex;
+  flex-direction: row;
+  /* width: inherit; */
+}
+
+
+.line {
+  background-color: var(--bs-gray-500);
+  width: 6rem;
+  text-align: center;
+  margin: 0 0.5rem;
+  border-end-start-radius: 0.2rem;
+  border-end-end-radius: 0.2rem;
+}
+.filaA{
+  height: 37rem;
+  width: 6rem;
+  background-color: var(--bs-gray-700);
+}
+.filaS{
+  width: 6rem !important;
+  height: 37rem;
+}
+.filaP{
+  width: 6rem;
+  height: 5rem;
+}
+
+/* !STYLE DEL PALET */
+
+.EU {
+  height: 4rem;
+}
+
+.F {
+  height: 5rem;
+}
+
+.palet {
+  background-color: white;
+  border: 2px solid rgb(111, 111, 111);
+  width: 6rem;
+  margin: 0.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 30% 30% 40%;
+  border-radius: 0.5rem;
+}
+
+#numPalet {
+  font-size: 1.2em;
+  font-weight: 700;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 0.5rem;
+}
+
+#producto {
+  grid-column: 4 / span 2;
+  font-size: 1.2em;
+  margin: 0;
+  /* padding-top: 0.3rem; */
+  border-top-right-radius: 0.5rem;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+#calibre {
+  grid-column: 4 / span 1;
+  margin: 0;
+  /* font-size: 2em; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#alveolo {
+  grid-column: 5 / span 1;
+  margin: 0;
+  /* font-size: 2em; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#caja {
+  grid-column: 1 / span 5;
+  grid-row: 3 / span 1;
+  margin: 0;
+  /* font-size: 2em; */
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+/* !FIN ESTILO PALET */
+
+/** ESTILO FORMULARIO NUEVO PALET */
+
+.opciones {
+  right: 110%;
+  background-color: var(--bs-gray-100) !important;
+  width: 7rem;
+  height: inherit;
+}
+.btnOpt {
+  width: 7em;
+}
+
+.notDisplay {display: none;}
+
+.paletInputs {
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.2rem;
+  /* padding-top: 5px; */
+  justify-content: center;
+}
+
+#inputId{
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+} 
+#inputProd{
+  grid-area: 1/4/span 1/span 1;
+}
+#inputCaja{
+  grid-area: 2/1/2/3;
+}
+#inputCal{
+  grid-area: 2/3/span 1/span 1;
+}
+#inputAlv{
+  grid-area: 2/4/span 1/span 1;
+}
+#inputSize {
+  grid-area: 3/1/4/2;
+}
+.btnCrear {
+  grid-area: 3/2/4/5;
+}
+/* ? ESTILO LISTADO PLAZA */
+
+#offcanvasHeaderPlaza {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#headerPlaza {
+  grid-row: 1 / span 1;
+}
+#opcionesrPlaza {
+  grid-row: 2 / span 1;
+}

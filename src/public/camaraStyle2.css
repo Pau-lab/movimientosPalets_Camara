@@ -1,0 +1,188 @@
+:root {
+    font-size: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    --Azul: rgb(34, 124, 157);
+    --Verde: rgb(135, 187, 162);
+    --VerdeOscuro: rgb(60, 110, 113);
+    --Rojo: rgb(255, 72, 78);
+    --Amarillo: rgb(255, 203, 119);
+    --Blanco: rgb(254, 249, 239);
+    --GrisOscuro: rgb(53, 53, 53);
+    --GrisClaro: rgb(217, 217, 217);
+    --GrisMedio: rgb(143, 142, 142);
+    --resalteAmarillo: rgb(222, 255, 10);
+    --resalteVerde: rgb(10, 255, 153);
+    --resalteAzul: rgb(10, 239, 255);
+    --resalteVioleta: rgb(190, 10, 255);
+    --resalteRojo: rgb(255, 0, 109);
+}
+
+body {
+    background-color: var(--Blanco);
+    height: 56rem;
+    width: 95rem;
+}
+
+#nav {
+    background-color: var(--GrisOscuro);
+    height: 4rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+}
+.btnNav {
+    align-self: center;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    height: 3rem;
+}
+
+#camara {
+    border: 3px solid var(--GrisClaro);
+    display: block;
+    align-content: center;
+}
+
+#suelo, #altura {
+    background-color: var(--Blanco);
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+}
+
+#altura{display: none;}
+
+#espacio {
+    background-color: var(--GrisClaro);
+    display: grid;
+    grid-template-columns: repeat(13, 6rem);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    height: 5rem;
+    width: inherit;
+    margin: 0.5rem 0;
+    align-content: center;
+    padding-left: 0.5rem;
+}
+
+#pared {
+    background-color: var(--Blanco);
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+}
+
+.filaS {
+    background-color: var(--GrisClaro);
+    width: 6rem;
+    height: 37rem;
+    text-align: center;
+    color: var(--GrisMedio);
+    margin: 0 0.5rem;
+    border-end-start-radius: 0.2rem;
+    border-end-end-radius: 0.2rem;
+}
+
+.filaA {
+    background-color: var(--GrisMedio);
+    width: 6rem;
+    height: 37rem;
+    margin: 0 0.5rem;
+    color: var(--GrisOscuro);
+    border-end-start-radius: 0.2rem;
+    text-align: center;
+    border-end-end-radius: 0.2rem;
+}
+
+.filaP {
+    background-color: var(--GrisClaro);
+    width: 6rem;
+    height: 5rem;
+    text-align: start;
+    margin: 0 0.5rem;
+    border-start-end-radius: 0.2rem;
+    color: var(--GrisMedio);
+    border-start-start-radius: 0.2rem;
+}
+
+
+.palet {
+    background-color: white;
+    width: 6rem;
+    margin: 0.2rem 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 30% 30% 40%;
+    border-radius: 0.5rem;
+
+}
+
+.EU {
+    height: 4rem;
+}
+
+.F {
+    height: 5rem;
+}
+
+
+#numPalet {
+    font-size: 1.2em;
+    font-weight: 700;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.5rem;
+}
+
+#producto {
+    grid-column: 4 / span 2;
+    font-size: 1.3em;
+    padding-top: 0.3rem;
+    border-top-right-radius: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#calibre {
+    grid-column: 4 / span 1;
+    /* font-size: 2em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#alveolo {
+    grid-column: 5 / span 1;
+    /* font-size: 2em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#caja {
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 1;
+    /* font-size: 2em; */
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* !_____________FORMATO DE RESALTE_____________________________________ */
+.ghost {
+    background-color: var(--resalteAmarillo);
+    opacity: 0.4;
+}
+
+.resalteAzul {
+    background-color: var(--resalteAzul);
+    opacity: 0.4;
+}
+
